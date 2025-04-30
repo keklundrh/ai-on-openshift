@@ -61,13 +61,13 @@ jobs:
             rm -rf temp-$repo
           done
 
-      - name: Commit and push changes 
-        run: | 
-          git config --global user.email "rh-ai-kickstart-bot@redhat.com" 
-          git config --global user.name "rh-ai-kickstart-bot"
-          git add --all docs/kickstart
-          git commit -m "Update README files from rh-ai-kickstart" || echo "No changes" 
-          git push origin $BRANCH 
+      # - name: Commit and push changes 
+      #   run: | 
+      #     git config --global user.email "rh-ai-kickstart-bot@redhat.com" 
+      #     git config --global user.name "rh-ai-kickstart-bot"
+      #     git add --all docs/kickstart
+      #     git commit -m "Update README files from rh-ai-kickstart" || echo "No changes" 
+      #     git push origin $BRANCH 
 
       - name: Create Pull Request to main 
         uses: peter-evans/create-pull-request@v5
