@@ -72,9 +72,10 @@ jobs:
       - name: Create Pull Request to main 
         uses: peter-evans/create-pull-request@v5
         with:
-          token: $${{ secrets.GITHUB_TOKEN }} 
+          token: ${{ secrets.GITHUB_TOKEN }} 
           title: "Update kickstart READMEs from rh-ai-kickstart" 
           body: "This PR contains updated README files extracted from all rh-ai-kickstart repositories" 
           base: main
-          branch: $${{ env.BRANCH }}
+          branch: ${{ env.BRANCH }}
           commit-message: "Update kickstart READMES"
+        
