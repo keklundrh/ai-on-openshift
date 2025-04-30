@@ -39,6 +39,8 @@ jobs:
 
             # find the first directory called image*
             image_dir=$(find temp-$repo -type d -iname "image*" -print -quit)
+            echo "$image_dir"
+            
             if [ -f "$readme" ]; then
               cp "$readme" docs/kickstart/$repo/
               echo "✓ Extracted README from $repo"
@@ -47,7 +49,7 @@ jobs:
                 cp -R "$image_dir" docs/kickstart/$repo/
                 echo "✓ Extracted IMAGES from $repo"  
               else 
-                echo "⚠ No README found for $repo"
+                echo "⚠ No IMAGES found for $repo"
               fi 
           
             else
