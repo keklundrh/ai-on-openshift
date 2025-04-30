@@ -34,12 +34,14 @@ jobs:
           for repo in $repos; do
             echo "Processing $repo..."
             git clone https://github.com/rh-ai-kickstart/$repo temp-$repo
+            
             mkdir -p docs/kickstart/$repo/
+            
+            # find README file in root directory
             readme=$(find temp-$repo -maxdepth 1 -type f -iname "readme*")
 
-            # find the first directory called image*
+            # find the first, and only one, directory called image*
             image_dir=$(find temp-$repo -type d -iname "image*" -print -quit)
-            echo "$image_dir"
             
             if [ -f "$readme" ]; then
               cp "$readme" docs/kickstart/$repo/
@@ -55,11 +57,7 @@ jobs:
             else
               echo "⚠ No README found for $repo"
             fi
-            pwd
-            ls -lh
-            ls -lh docs/
-            ls -lh docs/kickstart/
-            ls -lh docs/kickstart/$repo
+
             rm -rf temp-$repo
           done
 
@@ -67,9 +65,16 @@ jobs:
         run: | 
           git config --global user.email "rh-ai-kickstart-bot@redhat.com" 
           git config --global user.name "rh-ai-kickstart-bot"
-          git status
           git add --all docs/kickstart
-          git status
           git commit -m "Update README files from rh-ai-kickstart" || echo "No changes" 
           git push origin $BRANCH 
-          
+
+      - name: Create Pull Request to main 
+        uses: peter-evancs/create-pull-request@v5
+          with:
+            token: $${{ secrets.GITHUB_TOKEN }} 
+            title: "Update kickstart READMEs from rh-ai-kickstart" 
+            body: "This PR contains updated README files extracted from all rh-ai-kickstart repositories" 
+            base: main
+            branch: $${{ env.BRANCH }}
+            commit-message: "Update kickstart READMES"
