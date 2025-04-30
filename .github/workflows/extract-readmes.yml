@@ -45,7 +45,7 @@ jobs:
               cp "$readme" docs/kickstart/$repo/
               echo "✓ Extracted README from $repo"
               
-              if [ -f "$image_dir" ]; then 
+              if [ -d "$image_dir" ]; then 
                 cp -R "$image_dir" docs/kickstart/$repo/
                 echo "✓ Extracted IMAGES from $repo"  
               else 
