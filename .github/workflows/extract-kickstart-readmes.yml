@@ -44,7 +44,7 @@ jobs:
               if [ -d "$image_dir" ]; then 
                 image_rel_path=${image_dir#temp-$repo}
                 mkdir -p docs/kickstart/$repo/$image_rel_path
-                cp -R "$image_dir" docs/kickstart/$repo/$image_rel_path
+                cp -R $image_dir/ docs/kickstart/$repo/$image_rel_path/
                 echo "✓ Extracted IMAGES from $repo"  
               else 
                 echo "⚠ No IMAGES found for $repo"
