@@ -61,6 +61,9 @@ jobs:
             rm -rf temp-$repo
           done
 
+          git config user.name "GitHub Actions Bot" 
+          git config user.email "<>"
+
       # - name: Commit and push changes 
       #   run: | 
       #     git config --global user.email "rh-ai-kickstart-bot@redhat.com" 
