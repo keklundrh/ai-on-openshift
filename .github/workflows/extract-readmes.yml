@@ -19,11 +19,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Create working branch 
-        run: | 
-          export BRANCH=update-readmes-$(date +%s)
-          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
-          git checkout -b $BRANCH
+      # - name: Create working branch 
+      #   run: | 
+      #     export BRANCH=update-readmes-$(date +%s)
+      #     echo "BRANCH=$BRANCH" >> $GITHUB_ENV
+      #     git checkout -b $BRANCH
 
       - name: Fetch READMEs from rh-ai-kickstart
         env: 
