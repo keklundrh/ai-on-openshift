@@ -70,7 +70,7 @@ jobs:
           git push origin $BRANCH 
 
       - name: Create Pull Request to main 
-        uses: peter-evancs/create-pull-request@v5
+        uses: peter-evans/create-pull-request@v5
         with:
           token: $${{ secrets.GITHUB_TOKEN }} 
           title: "Update kickstart READMEs from rh-ai-kickstart" 
