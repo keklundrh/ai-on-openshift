@@ -62,7 +62,7 @@ jobs:
       - name: Commit and push changes 
         run: | 
           git status
-          git add docs/kickstart
+          git add -all docs/kickstart
           git status
           git commit -m "Update README files from rh-ai-kickstart" || echo "No changes" 
           git push origin $BRANCH 
