@@ -39,6 +39,16 @@ jobs:
           repos=$(gh api orgs/rh-ai-kickstart/repos --paginate -q '.[].name')
           for repo in $repos; do
             echo "Processing $repo..."
+            git clone --depth=1 https://github.com/rh-ai-kickstart/$repo temp-$repo
+            mkdir -p docs/kickstart/$repo/
+            readme=$(find temp-$repo -maxdepth 1 -type f -iname "readme*")
+            if [ -f "$readme" ]; then
+              cp "$readme" docs/kickstart/$repo/
+              echo "✓ Extracted README from $repo"
+            else
+              echo "⚠ No README found for $repo"
+            fi
+            rm -rf temp-$repo
           done
 
           
