@@ -24,8 +24,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-        with: 
-          token: ${{ secrets.PAT }}
 
       - name: Create working branch 
         run: | 
@@ -63,6 +61,8 @@ jobs:
 
       - name: Commit and push changes 
         run: | 
+          git config --global user.email "rh-ai-kickstart-bot@redhat.com" 
+          git config --global user.name "rh-ai-kickstart-bot"
           git status
           git add --all docs/kickstart
           git status
