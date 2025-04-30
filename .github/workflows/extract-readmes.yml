@@ -44,10 +44,6 @@ jobs:
             echo "Processing $repo..."
             git clone --depth=1 https://github.com/rh-ai-kickstart/$repo temp-$repo
             mkdir -p docs/kickstart/$repo/
-            pwd
-            ls -lh
-            ls -lh docs/
-            ls -lh docs/kickstart/$repo
             readme=$(find temp-$repo -maxdepth 1 -type f -iname "readme*")
             if [ -f "$readme" ]; then
               cp "$readme" docs/kickstart/$repo/
@@ -55,13 +51,19 @@ jobs:
             else
               echo "⚠ No README found for $repo"
             fi
+            pwd
+            ls -lh
+            ls -lh docs/
+            ls -lh docs/kickstart/
+            ls -lh docs/kickstart/$repo
             rm -rf temp-$repo
-            ls -lh docs/kickstart
           done
 
       - name: Commit and push changes 
         run: | 
+          git status
           git add docs/kickstart
+          git status
           git commit -m "Update README files from rh-ai-kickstart" || echo "No changes" 
           git push origin $BRANCH 
           
