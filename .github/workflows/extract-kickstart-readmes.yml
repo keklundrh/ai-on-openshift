@@ -24,11 +24,10 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdir -p docs/kickstart
-
-					# get repos in rh-ai-kickstart          
+	  # get repos in rh-ai-kickstart          
           repos=$(gh api orgs/rh-ai-kickstart/repos --paginate -q '.[].name')
           
-					for repo in $repos; do
+	  for repo in $repos; do
             echo "Processing $repo..."
             git clone https://github.com/rh-ai-kickstart/$repo temp-$repo
             
