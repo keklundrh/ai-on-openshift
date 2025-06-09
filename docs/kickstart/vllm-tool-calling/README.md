@@ -1,3 +1,5 @@
+[🔗 View source](https://github.com/rh-ai-kickstart/vllm-tool-calling)
+
 # vLLM Tool Calling 
 
 Welcome to the vLLM [Function Calling](https://ai-on-openshift.io/odh-rhoai/enable-function-calling/) Kickstart!  

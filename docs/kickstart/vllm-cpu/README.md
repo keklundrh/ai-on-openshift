@@ -1,3 +1,5 @@
+[🔗 View source](https://github.com/rh-ai-kickstart/vllm-cpu)
+
 # vllm-cpu
 
 Welcome to the vLLM CPU kickstart!
@@ -105,7 +107,7 @@ You can get the OpenShift AI Dashboard URL by:
 oc get routes rhods-dashboard -n redhat-ods-applications
 ```
 
-Once inside the dashboard, naviaget to Data Science Projects -> tinyllama-cpu-demo (or what you called your ${PROJECT} if you changed from default).
+Once inside the dashboard, navigate to Data Science Projects -> tinyllama-cpu-demo (or what you called your ${PROJECT} if you changed from default).
 ![OpenShift AI Projects](images/rhoai-1.png)
 
 Inside the project you can see Workbenches, open up the one for AnythingLLM.
