@@ -78,7 +78,7 @@ jobs:
           git config user.email "<>"
 
       - name: Create Pull Request to main 
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@v7
         with:
           title: "Update kickstart READMEs from rh-ai-kickstart" 
           body: "This PR contains updated README files extracted from all rh-ai-kickstart repositories" 
