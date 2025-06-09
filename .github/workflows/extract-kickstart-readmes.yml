@@ -36,7 +36,7 @@ jobs:
           mkdir -p docs/kickstart   
           
           # for repo in $repos; do
-          for repo in "$repos[@]}"; do
+          for repo in "${repos[@]}"; do
             git clone https://github.com/rh-ai-kickstart/$repo temp-$repo
             
             mkdir -p docs/kickstart/$repo/
