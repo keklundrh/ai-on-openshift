@@ -26,9 +26,17 @@ jobs:
         env: 
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          
+          repos=(
+            vllm-cpu
+            vllm-tool-calling
+          )
+          # repos=$(gh api orgs/rh-ai-kickstart/repos --paginate -q '.[].name')
+          
           mkdir -p docs/kickstart   
-          repos=$(gh api orgs/rh-ai-kickstart/repos --paginate -q '.[].name')
-          for repo in $repos; do
+          
+          # for repo in $repos; do
+          for repo in "$repose[@]}"; do
             git clone https://github.com/rh-ai-kickstart/$repo temp-$repo
             
             mkdir -p docs/kickstart/$repo/
@@ -41,7 +49,13 @@ jobs:
             
             
             if [ -f "$readme" ]; then
-              cp "$readme" docs/kickstart/$repo/
+              # cp "$readme" docs/kickstart/$repo/
+              {
+                echo "[🔗 View source](https://github.com/rh-ai-kickstart/${repo})"
+                echo ""
+                cat "$readme"
+              } > docs/kickstart/$repo/README.md
+              
               echo "✓ Extracted README from $repo"
               
               if [ -d "$image_dir" ]; then 
