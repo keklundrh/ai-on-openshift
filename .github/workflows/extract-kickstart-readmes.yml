@@ -52,6 +52,7 @@ jobs:
               # cp "$readme" docs/kickstart/$repo/
               {
                 echo "[🔗 View source](https://github.com/rh-ai-kickstart/${repo})"
+                echo " | "
                 echo "[🚨 Open issue](https://github.com/rh-ai-kickstart/${repo}/issues)"
                 echo ""
                 cat "$readme"
