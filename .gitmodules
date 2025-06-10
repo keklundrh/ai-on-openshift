@@ -1,3 +1,6 @@
 [submodule "docs/kickstart/RAG"]
 	path = docs/kickstart/RAG
 	url = https://github.com/rh-ai-kickstart/RAG
+[submodule "docs/kickstart/vllm-cpu"]
+	path = docs/kickstart/vllm-cpu
+	url = https://github.com/rh-ai-kickstart/vllm-cpu
