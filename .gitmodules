@@ -1,0 +1,3 @@
+[submodule "docs/kickstart/RAG"]
+	path = docs/kickstart/RAG
+	url = https://github.com/rh-ai-kickstart/RAG
