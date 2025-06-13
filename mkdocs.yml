@@ -174,7 +174,7 @@ nav:
   - AI kickstart (beta): 
     - What are AI kickstarts?: kickstart/what-are-kickstarts.md
     - Kickstarts:
-      - Overview: kickstart/README.md
+      - Overview: kickstart/kickstarts/index.md
       - vllm-cpu: kickstart/vllm-cpu/README.md
       - RAG: kickstart/RAG/README.md
       - vllm tool calling: kickstart/vllm-tool-calling/README.md
