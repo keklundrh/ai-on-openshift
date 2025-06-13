@@ -9,15 +9,15 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      
-      - name: Mark github workspace as safe
-        run: |
-          git config --global --add safe.directory /github/workspace
+
+        
       
       - name: Checkout submodules 
         uses: srt32/git-actions@v0.0.3
         with:
           args: git submodule update --init --recursive
+        run: |
+          git config --global --add safe.directory /github/workspace
           
       - uses: actions/setup-python@v5
         with:
