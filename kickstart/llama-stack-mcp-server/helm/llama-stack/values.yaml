@@ -1,0 +1,72 @@
+# Default values for llama-stack
+replicaCount: 1
+
+image:
+  repository: llamastack/distribution-remote-vllm
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""
+
+podAnnotations: {}
+
+podSecurityContext:
+  runAsNonRoot: true
+  # Remove specific UID/GID to let OpenShift assign them
+  # fsGroup: 1000
+
+securityContext:
+  allowPrivilegeEscalation: false
+  capabilities:
+    drop:
+    - ALL
+  readOnlyRootFilesystem: false
+  runAsNonRoot: true
+  # Remove specific UID/GID to let OpenShift assign them
+  # runAsUser: 1000
+  # runAsGroup: 1000
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8001
+  annotations: {}
+
+
+resources:
+  limits:
+    cpu: 2000m
+    memory: 4Gi
+  requests:
+    cpu: 1000m
+    memory: 2Gi
+
+
+autoscaling:
+  enabled: false
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+# Llama Stack configuration
+llamaStack:
+  inferenceModel: "llama3-2-3b"
+  vllmUrl: "http://llama3-2-3b-predictor:8080/v1"
+
+# Environment variables
+env:
+  LLAMA_STACK_HOST: "0.0.0.0"
+
+# ConfigMap for Llama Stack configuration
+configMap:
+  enabled: true

@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+sqlalchemy[asyncio]
+alembic
+asyncpg
+psycopg2-binary
+pydantic
+python-dotenv
+bcrypt
+pydantic[email]
+llama_stack_client==0.2.6
+vulture
+black
+isort
+pre-commit
+flake8
