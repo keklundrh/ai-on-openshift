@@ -4,3 +4,27 @@
 [submodule "docs/kickstart/vllm-cpu"]
 	path = docs/kickstart/vllm-cpu
 	url = https://github.com/rh-ai-kickstart/vllm-cpu
+[submodule "docs/kickstart/llama-stack-observability"]
+	path = docs/kickstart/llama-stack-observability
+	url = https://github.com/rh-ai-kickstart/llama-stack-observability
+[submodule "docs/kickstart/ai-virtual-agent"]
+	path = docs/kickstart/ai-virtual-agent
+	url = https://github.com/rh-ai-kickstart/ai-virtual-agent
+[submodule "docs/kickstart/AI-Observability-Metric-Summarizer"]
+	path = docs/kickstart/AI-Observability-Metric-Summarizer
+	url = https://github.com/rh-ai-kickstart/AI-Observability-Metric-Summarizer
+[submodule "docs/kickstart/llama-stack-mcp-server"]
+	path = docs/kickstart/llama-stack-mcp-server
+	url = https://github.com/rh-ai-kickstart/llama-stack-mcp-server
+[submodule "docs/kickstart/custom-workbench-images-examples"]
+	path = docs/kickstart/custom-workbench-images-examples
+	url = https://github.com/rh-ai-kickstart/custom-workbench-images-examples
+[submodule "docs/kickstart/dynamic-model-router"]
+	path = docs/kickstart/dynamic-model-router
+	url = https://github.com/rh-ai-kickstart/dynamic-model-router
+[submodule "docs/kickstart/rhoai-metrics-dashboard"]
+	path = docs/kickstart/rhoai-metrics-dashboard
+	url = https://github.com/rh-ai-kickstart/rhoai-metrics-dashboard
+[submodule "docs/kickstart/vllm-tool-calling"]
+	path = docs/kickstart/vllm-tool-calling
+	url = https://github.com/rh-ai-kickstart/vllm-tool-calling

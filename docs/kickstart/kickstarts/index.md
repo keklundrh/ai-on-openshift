@@ -1,8 +1,8 @@
 | Repository Name | Description |
 |-----------------|-------------|
+| llama-stack-observability | Llama Stack Observability Kickstart |
 | ai-virtual-agent |  |
 | ai-architecture-charts | This repository contains all the helm charts to deploy LLM service, Llama Stack server, configuring pipeline server, minio, pgvector |
-| llama-stack-observability | Llama Stack Observability Kickstart |
 | AI-Observability-Metric-Summarizer | AI Kickstart that provides interactive dashboard to analyze AI Model Performance collected from Prometheus |
 | ai-kickstart-contrib | A repo for AI kickstart documentation, collaboration and support |
 | llama-stack-mcp-server | Deploys Llama 3.2-3B on vLLM with Llama Stack and MCP servers in OpenShift AI. |
