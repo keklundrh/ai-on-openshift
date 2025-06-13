@@ -173,8 +173,8 @@ nav:
       - Text to Image: demos/stable-diffusion/stable-diffusion.md
   - AI kickstart (beta): 
     - What are AI kickstarts?: kickstart/what-are-kickstarts.md
-    - Kickstarts:
-      - Overview: kickstart/kickstarts/index.md
+    - AI Kickstart Catalog:
+      - AI Kickstart Catalog: kickstart/kickstarts/index.md
       - vllm-cpu: kickstart/vllm-cpu/README.md
       - RAG: kickstart/RAG/README.md
       - vllm tool calling: kickstart/vllm-tool-calling/README.md
