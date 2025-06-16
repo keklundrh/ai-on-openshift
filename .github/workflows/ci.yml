@@ -14,7 +14,7 @@ jobs:
           
       - name: update submodule 
         run: | 
-          git submodule update --init --recursive  
+          git submodule update --init --recursive  --remote
           
       - uses: actions/setup-python@v5
         with:
