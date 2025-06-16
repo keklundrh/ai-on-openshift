@@ -176,12 +176,12 @@ nav:
     - AI Kickstart Catalog:
       - AI Kickstart Catalog: kickstart/catalog/index.md
       - vllm-cpu: kickstart/vllm-cpu/README.md
-      - RAG: kickstart/RAG/README.md
       - vllm tool calling: kickstart/vllm-tool-calling/README.md
-      - llama-stack-observability: kickstart/llama-stack-observability/README.md
-      - ai-virtual-agent: kickstart/ai-virtual-agent/README.md
-      - AI-Observability-Metric-Summarizer: kickstart/AI-Observability-Metric-Summarizer/README.md 
-      - llama-stack-mcp-server: kickstart/llama-stack-mcp-server/README.md
-      - custom-workbench-images-examples: kickstart/custom-workbench-images-examples/README.md
       - dynamic-model-router: kickstart/dynamic-model-router/README.md
+      - llama-stack-mcp-server: kickstart/llama-stack-mcp-server/README.md
       - rhoai-metrics-dashboard: kickstart/rhoai-metrics-dashboard/README.md
+      - llama-stack-observability: kickstart/llama-stack-observability/README.md
+      - custom-workbench-images-examples: kickstart/custom-workbench-images-examples/README.md
+      - RAG: kickstart/RAG/README.md
+      - AI-Observability-Metric-Summarizer: kickstart/AI-Observability-Metric-Summarizer/README.md 
+      - ai-virtual-agent: kickstart/ai-virtual-agent/README.md
