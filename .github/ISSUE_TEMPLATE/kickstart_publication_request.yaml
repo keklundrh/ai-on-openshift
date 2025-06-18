@@ -29,7 +29,7 @@ body:
       required: false
   - type: input
     attributes:
-      label: release
+      label: Specify specific release
       description: Enter tag, release or branch to be published (optional, default to main:latest)
       placeholder: main
     validations: 
