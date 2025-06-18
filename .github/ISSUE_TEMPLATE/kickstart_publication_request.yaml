@@ -1,0 +1,44 @@
+name: AI kickstart publication and update request 
+description: Request to publish or update an AI kickstart on ai-on-openshift.io/kickstart
+title: "[AI kickstart publication request]: "
+labels: 
+  - kickstart_pub_request
+  - unreviewed 
+assignees: 
+  - keklundrh 
+body: 
+  - type: markdown 
+    attributes: 
+      value: |
+        Please use this form to request/update AI kickstart publication 
+  - type: input 
+    id: kickstart-id
+    attributes: 
+      label: AI kickstart  
+      description: Submit requested kickstart url. 
+      placeholder: github.com/rh-ai-kickstart/xyz
+    validations:
+      required: true
+  - type: input
+    id: AI-kickstart-title
+    attributes:
+      label: AI kickstart title
+      description: (optional) Enter descriptive title, if differs from repo title
+      placeholder: (optional) 
+    validations: 
+      required: false
+  - type: input
+    attributes:
+      label: release
+      description: Enter tag, release or branch to be published (optional, default to main:latest)
+      placeholder: main
+    validations: 
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Publication criteria 
+      description: Before requesting publication, attest kickstart contains content consistent with Red Hat values and code of conduct.
+      options:
+        - label: Kickstart is consistent with Red Hat values and code of conduct. 
+          required: true
