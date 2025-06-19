@@ -31,7 +31,7 @@ body:
     id: release-tag
     attributes:
       label: Specify specific release
-      description: (optional) Enter tag, release or branch to be published (optional, default to main:latest)
+      description: (optional) Enter tag, release or branch to be published (defaults to main:latest)
       placeholder: main
     validations: 
       required: false
@@ -39,7 +39,7 @@ body:
     id: comments
     attributes:
       label: Comments
-      description: Please enter anything additional information, details or useful context here.
+      description: (optional) Please enter anything additional information, details or useful context here.
       placeholder: My kickstart is so great ..... 
     validations:
       required: false
