@@ -28,11 +28,20 @@ body:
     validations: 
       required: false
   - type: input
+    id: release-tag
     attributes:
       label: Specify specific release
       description: (optional) Enter tag, release or branch to be published (optional, default to main:latest)
       placeholder: main
     validations: 
+      required: false
+  - type: textarea
+    id: comments
+    attributes:
+      label: Comments
+      description: Please enter anything additional information, details or useful context here.
+      placeholder: My kickstart is so great ..... 
+    validations:
       required: false
   - type: checkboxes
     id: terms
