@@ -182,6 +182,3 @@ nav:
       - rhoai-metrics-dashboard: kickstart/rhoai-metrics-dashboard/README.md
       - llama-stack-observability: kickstart/llama-stack-observability/README.md
       - custom-workbench-images-examples: kickstart/custom-workbench-images-examples/README.md
-      - RAG: kickstart/RAG/README.md
-      - AI-Observability-Metric-Summarizer: kickstart/AI-Observability-Metric-Summarizer/README.md 
-      - ai-virtual-agent: kickstart/ai-virtual-agent/README.md
