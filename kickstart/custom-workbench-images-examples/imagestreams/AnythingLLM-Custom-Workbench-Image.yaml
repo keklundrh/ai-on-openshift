@@ -1,0 +1,57 @@
+kind: ImageStream
+apiVersion: image.openshift.io/v1
+metadata:
+  annotations:
+    opendatahub.io/notebook-image-desc: 'AnythingLLM Workbench Image (from: https://quay.io/repository/rh-aiservices-bu/anythingllm-workbench?tab=tags'
+    opendatahub.io/notebook-image-order: '01'
+    opendatahub.io/notebook-image-url: 'https://quay.io/repository/rh-aiservices-bu/anythingllm-workbench?tab=tags'
+    opendatahub.io/notebook-image-name: 'Kickstart Custom Image: AnythingLLM Workbench'
+    opendatahub.io/recommended-accelerators: '[]'
+  name: kickstart-image-anythingllm-workbench
+  namespace: redhat-ods-applications
+  labels:
+    app.kubernetes.io/created-by: byon
+    opendatahub.io/dashboard: 'true'
+    opendatahub.io/notebook-image: 'true'
+spec:
+  lookupPolicy:
+    local: true
+  tags:
+    - name: 1.7.5
+      annotations:
+        opendatahub.io/notebook-python-dependencies: |
+          [
+            {"name": "AnythingLLM","version": "v1.7.5"}
+          ]
+        opendatahub.io/notebook-software: |
+          [
+            {"name": "AnythingLLM", "version": "v1.7.5"}
+          ]
+        openshift.io/imported-from: 'quay.io/rh-aiservices-bu/anythingllm-workbench:1.7.5'
+        opendatahub.io/workbench-image-recommended: 'true'
+      from:
+        kind: DockerImage
+        name: 'quay.io/rh-aiservices-bu/anythingllm-workbench:1.7.5'
+      importPolicy:
+        importMode: Legacy
+      referencePolicy:
+        type: Source
+    - name: 1.7.4
+      annotations:
+        opendatahub.io/notebook-python-dependencies: |
+          [
+            {"name": "AnythingLLM","version": "v1.7.4"}
+          ]
+        opendatahub.io/notebook-software: |
+          [
+            {"name": "AnythingLLM", "version": "v1.7.4"}
+          ]
+        openshift.io/imported-from: 'quay.io/rh-aiservices-bu/anythingllm-workbench:1.7.4'
+        opendatahub.io/workbench-image-recommended: 'false'
+      from:
+        kind: DockerImage
+        name: 'quay.io/rh-aiservices-bu/anythingllm-workbench:1.7.4'
+      importPolicy:
+        importMode: Legacy
+      referencePolicy:
+        type: Source
