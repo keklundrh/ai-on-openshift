@@ -113,7 +113,6 @@ nav:
       - Custom notebooks: odh-rhoai/custom-notebooks.md
       - Custom Serving Runtime (Triton): odh-rhoai/custom-runtime-triton.md
       - Dashboard configuration: odh-rhoai/configuration.md
-      - GitOps (CRs, objects,...): odh-rhoai/gitops.md
       - Kueue preemption: odh-rhoai/kueue-preemption/readme.md
       - Model serving type modification: odh-rhoai/model-serving-type-modification.md
       - NVIDIA GPUs: odh-rhoai/nvidia-gpus.md
@@ -123,6 +122,11 @@ nav:
       - RHOAI Metrics Dashboard for Model Serving: odh-rhoai/kserve-uwm-dashboard-metrics.md
       - Connect to RHOAI Workbench Kernel from VS Code: odh-rhoai/connect-vscode-to-rhoai-wb.md
       - AnythingLLM as Custom Workbench: odh-rhoai/custom-workbench-anythingllm.md
+      - Deploying a Red Hat Validated Model in a Disconnected OpenShift AI Environment: odh-rhoai/deploy-validated-models-on-disconnected.md
+    - GitOps:
+      - GitOps (CRs, objects,...): odh-rhoai/gitops.md
+      - RHOAI BU Cluster GitOps: odh-rhoai/rhoaibu-cluster-gitops.md
+      - Managing Secrets in an AI Platform: odh-rhoai/secret-management.md
     - Tools:
       - GPU pruner: odh-rhoai/gpu-pruner.md
       - ODH Tools and Extensions Companion: odh-rhoai/odh-tools-and-extensions-companion.md
@@ -168,7 +172,8 @@ nav:
       - AI for Everyone: generative-ai/ai-for-everyone.md 
       - Chat with your documentation: demos/llm-chat-doc/llm-chat-doc.md
       - Code assistant: demos/codellama-continue/codellama-continue.md
-      - Fine-tune Llama2: demos/llama2-finetune/llama2-finetune.md
+      - Fine-tuning Llama2 with Ray: demos/llama2-finetune/llama2-finetune.md
+      - Fine-tune Llama3 with KFTO: demos/llama3-finetune/llama3-finetune-kfto.md
       - From Podman AI Lab to OpenShift AI: demos/podman-ai-lab-to-rhoai/podman-ai-lab-to-rhoai.md
       - Text to Image: demos/stable-diffusion/stable-diffusion.md
   - AI kickstart (beta): 
